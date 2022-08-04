@@ -1,12 +1,15 @@
 import './App.css';
 import './index.css';
-import NavBar from './NavBar.js';
+import logo from './logo.png';
+import NavBar from './NavBar.jsx';
 
 
 function App() {
   return (
     <div>
       <NavBar></NavBar>
+      <div id="MainContent">
+      </div>
     </div>
 );
 }
@@ -20,12 +23,6 @@ function App() {
 //         <img src={logo} className="App-logo" alt="logo" />
 //         <p>
 //           Edit <code>src/App.js</code> and save to reload
-//         </p>
-//         <p className="DarkChar">
-//           Nope!
-//         </p>
-//         <p>
-//           New!
 //         </p>
 //         <a
 //           className="App-link"

@@ -1,14 +1,13 @@
-import "./Color.css";
 import "./Style.css";
 import NavBarButtons from "./NavBarButtons.jsx";
 import logo from './logo.png';
 
-function NavBar() {
+function NavBar(props) {
     return (
-        <div className="Logo">
-          <img src={logo} alt="Logo cannot be displayed"/>
+        <div className="NavBar">
+          <img className="Logo" src={logo} alt="Logo cannot be displayed" onClick={() => {window.location.reload(false)}}/>
           <div className="NavBarButtonContainer">
-            <NavBarButtons>
+            <NavBarButtons props={props}>
             </NavBarButtons>
           </div>
         </div>

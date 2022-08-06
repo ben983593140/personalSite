@@ -1,11 +1,13 @@
 :root {
-    --dark-color: #4a473e;
-    --background-color: #c9c4ae;
+    --dark-color: #4e4b42;  
+    --background-color: #cdc8b0;
     --light-color: #b4af9a;
+    --text-background-color: #dad4bb;
 }
 
-.Logo {
+.NavBar {
     display: flex;
+    flex-direction: row;
     margin-top: 5%;
     margin-bottom: 5%;    
     margin-left: 15%;
@@ -21,13 +23,13 @@ img {
 .NavBarButtonContainer {
     display: flex;
     align-items: center;
+    
 }
 
 .NavBarButton {
     color: var(--dark-color);
     background-color: var(--light-color);
     border: 0px;
-    font: Arial;
     font-size: calc(15px + 0.390625vw);
     letter-spacing: 2px;
     margin-left: 40px;
@@ -35,12 +37,54 @@ img {
     padding-bottom: 8px;
     padding-left: 40px;
     padding-right: 40px;
-    transition: 0.5s;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .NavBarButton:hover {
-    color: var(--background-color);
+    color: var(--text-background-color);
     background-color: var(--dark-color);
+    margin-bottom: 20px;
 }
 
+.Logo {
+    cursor: pointer;
+}
 
+.Background {
+    z-index: -1;
+}
+
+.SpotifyPlayer {
+    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+
+.SpotifyPlayer:hover {
+    width: 100%;
+}
+
+#MainContent {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+}
+
+.SidebarContainer {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}
+
+.Sidebar1 {
+    background-color: var(--light-color);
+    width: 18px;
+    margin-right: 8px;
+}
+
+.Sidebar2 {
+    background-color: var(--light-color);
+    width: 6px;
+}

@@ -1,27 +1,28 @@
 import './App.css';
 import './index.css';
-import useState from 'react';
+import {useState} from 'react';
 import Sidebar from './Sidebar.jsx'
 import NavBar from './NavBar.jsx';
 import Background from "./Background.jsx";
 
 
 function App() {
-  const [title, updateTitle] = useState("ABOUT")
-  const [content, updateContent] = useState(About());
 
-
-  return (
-    <div>
-      <iframe className="SpotifyPlayer" src="https://open.spotify.com/embed/track/1y4vvMeQPkzMTqHpRpzaDb?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      <Background></Background>
-      <NavBar updateTitle={updateTitle} updateContent={updateContent}></NavBar>
-      <div id="MainContent">
-        <Sidebar></Sidebar>
-        {/* <ContentDiv title={title} content={content}>
-        </ContentDiv> */}
-      </div>
-    </div>
+    return (
+        <div>
+            <iframe className="SpotifyPlayer" src="https://open.spotify.com/embed/track/1y4vvMeQPkzMTqHpRpzaDb?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <Background></Background>
+            <NavBar></NavBar>
+            <div id="ContentContainer">
+                <Sidebar></Sidebar>
+                <div>
+                    <div id="TitleContainer">
+                        <h1 id="ContentTitle"></h1>
+                    </div>
+                    <div id="Content"></div>        
+                </div>
+            </div>
+        </div>
 );
 }
 

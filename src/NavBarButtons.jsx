@@ -12,10 +12,10 @@ function NavBarButtons() {
 function NavBarButtonAction(text) {
     switch (text) {
         case "ABOUT":
-            About(text);
+            About();
             break;
         case "GAMES":
-            Games(text);
+            Games();
             break;
         default:
             break;
@@ -30,21 +30,24 @@ function ScrollUp() {
     document.documentElement.scrollTop = 0;
 }
 
-function About(text) {
+function About() {
     // Set title
-    let title = document.getElementById("ContentTitle");
-    title.textContent = text;
-    console.log(text);
+    let title = document.getElementById("Title");
+    title.textContent = "ABOUT";
 
     // Set content
+    let content = document.getElementById("Content");
+    content.textContent = "Testing about";
 }
 
-function Games(text) {
+function Games() {
     // Set title
-    let title = document.getElementById("ContentTitle");
-    title.textContent = text;
+    let title = document.getElementById("Title");
+    title.textContent = "Games I like";
 
     // Set content
+    let content = document.getElementById("Content");
+    content.textContent = "Testing games";
 }
 
 export default NavBarButtons;

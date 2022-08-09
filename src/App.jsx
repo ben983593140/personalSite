@@ -13,21 +13,15 @@ function App() {
             <iframe className="SpotifyPlayer" src="https://open.spotify.com/embed/track/1y4vvMeQPkzMTqHpRpzaDb?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
             <Background></Background>
             <NavBar></NavBar>
-            <div id="ContentContainer">
+            <div id="Container">
                 <Sidebar></Sidebar>
-                <div>
-                    <div id="TitleContainer">
-                        <h1 id="ContentTitle"></h1>
-                    </div>
+                <div id="ContentContainer">
+                    <h1 id="Title"></h1>
                     <div id="Content"></div>        
                 </div>
             </div>
         </div>
 );
-}
-
-function About() {
-
 }
 
 

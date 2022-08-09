@@ -8,11 +8,15 @@
 .NavBar {
     display: flex;
     flex-direction: row;
-    margin-top: 5%;
-    margin-bottom: 5%;    
+    margin: 50px 15% 50px 15%;
+    justify-content: center;
+}
+
+#Container {
+    display: flex;
+    flex-direction: row;
     margin-left: 15%;
     margin-right: 15%;
-    justify-content: center;
 }
 
 img {
@@ -23,7 +27,6 @@ img {
 .NavBarButtonContainer {
     display: flex;
     align-items: center;
-    
 }
 
 .NavBarButton {
@@ -45,6 +48,7 @@ img {
     color: var(--text-background-color);
     background-color: var(--dark-color);
     margin-bottom: 20px;
+    transition: 0.3s;
 }
 
 .Logo {
@@ -56,14 +60,16 @@ img {
 }
 
 .SpotifyPlayer {
-    border-radius: 12px;
     width: 80px;
     height: 80px;
     transition: 0.5s;
+    transition-delay: 2s;
+    overflow: hidden;
 }
 
 .SpotifyPlayer:hover {
     width: 100%;
+    transition-delay: 0s;
 }
 
 #MainContent {
@@ -87,4 +93,29 @@ img {
 .Sidebar2 {
     background-color: var(--light-color);
     width: 6px;
+}
+
+h1 {
+    color: var(--text-background-color);
+    background-color: var(--dark-color);
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 15px;
+    width: 100%;
+}
+
+p {
+    color: var(--dark-color);
+}
+
+#Content {
+    background-color: var(--text-background-color);
+    padding: 10px 0px 10px 15px;
+    width: 100%;
+    font-size: calc(15px + 0.390625vw);
+}
+
+#ContentContainer {
+    width: 100%;
 }

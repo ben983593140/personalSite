@@ -107,6 +107,7 @@ h1 {
 
 p {
     color: var(--dark-color);
+    margin: 0px;
 }
 
 #Content {
@@ -114,6 +115,10 @@ p {
     padding: 10px 0px 10px 15px;
     width: 100%;
     font-size: calc(15px + 0.390625vw);
+}
+
+#Content:empty {
+    padding: 0px 0px 0px 0px;
 }
 
 #ContentContainer {

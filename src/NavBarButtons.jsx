@@ -37,7 +37,18 @@ function About() {
 
     // Set content
     let content = document.getElementById("Content");
-    content.textContent = "Testing about";
+    content.textContent = "";
+    
+    let paragraphs = ["My name is Zaojia Zhao, usually I go by Ben so people don't have to stare at my name and try to figure out how it should be pronounced.",
+    "I am currently pursuing B.S. of Computer Science at University of California, Davis. I lived a more \"artistic\" life than a guy sitting in front of the computer all the time when I was young. My parents blame my deviation of interest from music to computers on games. But I like them, I really do!",
+    "I enjoy graphics, drama, music and overall experience throughout the course. Compared to movies, games allow me to interact and get feedbacks for my behavior within the design and guidelines of game designers",
+    ""];
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        content.appendChild(p);
+    }
 }
 
 function Games() {
@@ -47,7 +58,15 @@ function Games() {
 
     // Set content
     let content = document.getElementById("Content");
-    content.textContent = "Testing games";
+    content.textContent = "";
+    
+    let paragraphs = [];
+
+    for (let i = 0; i < paragraphs.length; i++) {
+        var p = document.createElement("p");
+        p.textContent = paragraphs[i];
+        content.appendChild(p);
+    }
 }
 
 export default NavBarButtons;

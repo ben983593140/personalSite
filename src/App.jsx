@@ -7,7 +7,6 @@ import Background from "./Background.jsx";
 
 
 function App() {
-
     return (
         <div>
             {/* <iframe className="SpotifyPlayer" src="https://open.spotify.com/embed/track/1y4vvMeQPkzMTqHpRpzaDb?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */}
@@ -21,7 +20,7 @@ function App() {
                 </div>
             </div>
         </div>
-);
+    );
 }
 
 

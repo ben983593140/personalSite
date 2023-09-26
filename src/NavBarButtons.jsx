@@ -1,27 +1,71 @@
 import "./Style.css";
+import React, { useState, useEffect } from 'react';
+import AboutDiv from "./AboutDiv.jsx";
+import {createRoot} from 'react-dom/client';
+
+const FADE_SPEED = 0.04
 
 function NavBarButtons() {
-    let array = ["ABOUT", "GAMES"]
+    const [activeButton, setActiveButton] = useState("About")
+    var array = ["About", "Projects", "Resume", "Links"]
+
+    useEffect(() => {
+        // Old content fade out
+        var container = document.getElementById("Container");
+        
+        const promise = new Promise((resolve, reject) => {
+            // Fade out
+            var op = 1
+            var timer = setInterval(() => {
+                if (op <= 0) {
+                    clearInterval(timer);
+                    resolve();
+                }
+                
+                container.style.opacity = op;
+                container.style.filter = 'alpha(opacity=' + op + ")";
+                op -= FADE_SPEED
+            }, 10);
+        });
+
+        // Wait for fade out to finish
+        promise
+        .then(() => {
+            // Switch to new content
+            switch (activeButton) {
+                case "About":
+                    About();
+                    break;
+                case "Projects":
+                    Projects();
+                    break;
+                case "Links":
+                    Links();
+                    break;
+                case "Resume":
+                    Resume();
+                default:
+                    break;
+            }
+
+            // New content fade in
+            ScrollUp();
+
+            var op = 0.1
+            var timer = setInterval(() => {
+                if (op >= 1)
+                    clearInterval(timer);
+
+                container.style.opacity = op;
+                container.style.filter = 'alpha(opacity=' + op + ")";
+                op += FADE_SPEED
+            }, 10);
+        });
+    })
 
     return array.map((text) => {
-        return <button className="NavBarButton" id={text} onClick={() => NavBarButtonAction(text)}>{text}</button>
+        return <button className="NavBarButton" key={text} onClick={() => setActiveButton(text)}>{text}</button>
     })
-}
-
-
-function NavBarButtonAction(text) {
-    switch (text) {
-        case "ABOUT":
-            About();
-            break;
-        case "GAMES":
-            Games();
-            break;
-        default:
-            break;
-    }
-
-    ScrollUp();
 }
 
 // Scroll to the top
@@ -32,41 +76,40 @@ function ScrollUp() {
 
 function About() {
     // Set title
-    let title = document.getElementById("Title");
-    title.textContent = "ABOUT";
+    var title = document.getElementById("Title");
+    title.textContent = "About";
 
     // Set content
-    let content = document.getElementById("Content");
+    var content = document.getElementById("Content");
+    var contentContainer = content.parentNode;
+    // contentContainer.replaceChild(<AboutDiv></AboutDiv>, content);
+
+}
+
+function Projects() {
+    // Set title
+    var title = document.getElementById("Title");
+    title.textContent = "Projects";
+
+    // Set content
+    var content = document.getElementById("Content");
     content.textContent = "";
     
-    let paragraphs = ["My name is Zaojia Zhao, usually I go by Ben so people don't have to stare at my name and try to figure out how it should be pronounced.",
-    "I am currently pursuing B.S. of Computer Science at University of California, Davis. I lived a more \"artistic\" life than a guy sitting in front of the computer all the time when I was young. My parents blame my deviation of interest from music to computers on games. But I like them, I really do!",
-    "I enjoy graphics, drama, music and overall experience throughout the course. Compared to movies, games allow me to interact and get feedbacks for my behavior within the design and guidelines of game designers",
-    ""];
+    var paragraphs = [];
 
-    for (let i = 0; i < paragraphs.length; i++) {
+    for (var i = 0; i < paragraphs.length; i++) {
         var p = document.createElement("p");
         p.textContent = paragraphs[i];
         content.appendChild(p);
     }
 }
 
-function Games() {
-    // Set title
-    let title = document.getElementById("Title");
-    title.textContent = "Games I like";
-
-    // Set content
-    let content = document.getElementById("Content");
-    content.textContent = "";
+function Links() {
     
-    let paragraphs = [];
+}
 
-    for (let i = 0; i < paragraphs.length; i++) {
-        var p = document.createElement("p");
-        p.textContent = paragraphs[i];
-        content.appendChild(p);
-    }
+function Resume() {
+
 }
 
 export default NavBarButtons;

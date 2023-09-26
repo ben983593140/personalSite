@@ -47,7 +47,7 @@ img {
 .NavBarButton:hover {
     color: var(--text-background-color);
     background-color: var(--dark-color);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     transition: 0.3s;
 }
 

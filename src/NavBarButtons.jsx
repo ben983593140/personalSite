@@ -61,11 +61,11 @@ function NavBarButtons() {
                 op += FADE_SPEED
             }, 10);
         });
-    })
+    });
 
     return array.map((text) => {
         return <button className="NavBarButton" key={text} onClick={() => setActiveButton(text)}>{text}</button>
-    })
+    });
 }
 
 // Scroll to the top

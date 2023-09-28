@@ -40,16 +40,16 @@ function App() {
             // Switch to new content
             switch (activeButton) {
                 case "About":
-                    About();
+                    contentText = <About></About>;
                     break;
                 case "Projects":
-                    Projects();
+                    contentText = Projects();
                     break;
                 case "Links":
-                    Links();
+                    contentText = Links();
                     break;
                 case "Resume":
-                    Resume();
+                    contentText = Resume();
                 default:
                     break;
             }
@@ -77,16 +77,18 @@ function App() {
                 <img className="Logo" src={logo} alt="Logo cannot be displayed" onClick={() => {window.location.reload(false)}}/>
                 <div className="NavBarButtonContainer">
                     <div>
-                        {array.map((text) => { return <button className="NavBarButton" key={text} onClick={() => setActiveButton(text)}>{text}</button>})}
+                        {array.map((buttonText) => { return <button className="NavBarButton" key={buttonText} onClick={() => setActiveButton(buttonText)}>{buttonText}</button>})}
                     </div>
                 </div>
             </div>
             <div id="Container">
                 <Sidebar></Sidebar>
                 <div id="ContentContainer">
-                    <h1 id="Title"></h1>
+                    <h1 id="Title">
+                        {activeButton}
+                    </h1>
                     <div id="Content">
-                        {contentText}
+                        <About></About>
                     </div>        
                 </div>
             </div>
@@ -94,5 +96,31 @@ function App() {
     );
 }
 
+// Scroll to the top
+function ScrollUp() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function About() {
+    return (
+        <p className="Content">
+            This is AboutDiv
+            <a href="https://www.ucdavis.edu/">University of California, Davis</a>
+        </p>
+    );
+}
+
+function Projects() {
+
+}
+
+function Links() {
+
+}
+
+function Resume() {
+
+}
 
 export default App;

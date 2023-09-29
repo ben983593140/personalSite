@@ -88,7 +88,14 @@ function App() {
                         {activeButton}
                     </h1>
                     <div id="Content">
-                        <About></About>
+                        {() => {
+                            switch (activeButton) {
+                                case 'About':
+                                    <About></About>;
+                                    break;
+                            }
+                        }}
+                        
                     </div>        
                 </div>
             </div>

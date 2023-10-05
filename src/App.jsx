@@ -77,7 +77,7 @@ class App extends React.Component{
             {/* <iframe className="SpotifyPlayer" src="https://open.spotify.com/embed/track/1y4vvMeQPkzMTqHpRpzaDb?utm_source=generator&theme=0" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> */}
             <Background></Background>
             <div className="NavBar">
-                <img className="Logo" src={logo} alt="Logo cannot be displayed" onClick={() => {window.location.reload(false)}}/>
+                <img className="Logo" src={logo} alt="Logo cannot be displayed" onClick={() => {window.location = '/'}}/>
                 <div className="NavBarButtonContainer">
                     <div>
                         {array.map((buttonText) => { return <button className="NavBarButton" key={buttonText} onClick={() => this.handleClick(buttonText)}>{buttonText}</button>})}
@@ -100,36 +100,10 @@ class App extends React.Component{
     }
 }
 
-// Scroll to the top
+// Scroll to the top of the page
 function ScrollUp() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-}
-
-
-function fadeOut(container) {
-    var op = 1
-        var timer = setInterval(() => {
-            if (op <= 0) 
-                clearInterval(timer);
-            
-            
-            container.style.opacity = op;
-            container.style.filter = 'alpha(opacity=' + op + ")";
-            op -= FADE_SPEED
-        }, 10);
-}
-
-function fadeIn(container) {
-    var op = 0.1
-    var timer = setInterval(() => {
-        if (op >= 1)
-            clearInterval(timer);
-
-        container.style.opacity = op;
-        container.style.filter = 'alpha(opacity=' + op + ")";
-        op += FADE_SPEED
-    }, 10);
 }
 
 function About() {
@@ -146,11 +120,24 @@ function Projects() {
 }
 
 function Links() {
-
+    return (
+        <p>
+            <a href="https://www.linkedin.com/in/zaojia-ben-zhao-238499184/" target="_blank">LinkedIn</a>
+            <br></br>
+            <a href="https://github.com/ben983593140" target="_blank">GitHub</a>
+        </p>
+    );
 }
 
 function Resume() {
+    return (
+        <div>
+            <p>
+                <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a>
 
+            </p>
+        </div>
+    );
 }
 
 export default App;

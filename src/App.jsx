@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar.jsx'
 import Background from "./Background.jsx";
 import logo from './logo.png';
+import resume from './Zaojia Zhao Resume.jpg';
 
 const FADE_SPEED = 0.04
 
@@ -12,7 +13,7 @@ class App extends React.Component{
     constructor(props) {
         super(props);
 
-        this.state = {activeButton: "Links"};
+        this.state = {activeButton: "Resume"};
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -117,6 +118,17 @@ function Projects() {
     return <p>Finally!</p>
 }
 
+function Resume() {
+    return (
+        <div >
+            <p>
+                <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a> to download my resume in PDF.
+            </p>
+            <img src={resume}/>
+        </div>
+    );
+}
+
 function Links() {
     return (
         <div>
@@ -130,16 +142,6 @@ function Links() {
             </p>
         </div>
 
-    );
-}
-
-function Resume() {
-    return (
-        <div >
-            <p>
-                <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a> to download my resume in PDF.
-            </p>
-        </div>
     );
 }
 

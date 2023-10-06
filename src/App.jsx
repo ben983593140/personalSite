@@ -2,9 +2,7 @@ import './App.css';
 import './index.css';
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar.jsx'
-import NavBar from './NavBar.jsx';
 import Background from "./Background.jsx";
-import NavBarButtons from "./NavBarButtons.jsx";
 import logo from './logo.png';
 
 const FADE_SPEED = 0.04
@@ -14,7 +12,7 @@ class App extends React.Component{
     constructor(props) {
         super(props);
 
-        this.state = {activeButton: "About"};
+        this.state = {activeButton: "Links"};
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -109,8 +107,8 @@ function ScrollUp() {
 function About() {
     return (
         <p className="Content">
-            This is AboutDiv
-            <a href="https://www.ucdavis.edu/">University of California, Davis</a>
+            I graduated from <a href="https://www.ucdavis.edu/">University of California, Davis</a> with Bachelor's Degree in 
+            Computer Science in 2023.
         </p>
     );
 }
@@ -121,20 +119,25 @@ function Projects() {
 
 function Links() {
     return (
-        <p>
+        <div>
             <a href="https://www.linkedin.com/in/zaojia-ben-zhao-238499184/" target="_blank">LinkedIn</a>
             <br></br>
             <a href="https://github.com/ben983593140" target="_blank">GitHub</a>
-        </p>
+            <br></br>
+            <br></br>
+            <p>
+                UI design inspired by <a href="https://www.google.com/search?q=nier+automata" target='_blank'><b>NieR:Automata</b></a>
+            </p>
+        </div>
+
     );
 }
 
 function Resume() {
     return (
-        <div>
+        <div >
             <p>
-                <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a>
-
+                <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a> to download my resume in PDF.
             </p>
         </div>
     );

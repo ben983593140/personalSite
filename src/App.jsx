@@ -124,6 +124,8 @@ function Resume() {
             <p padding>
                 <a href='Zaojia Zhao Resume.pdf' download="Zaojia Zhao Resume.pdf">Click Here</a> to download my resume in PDF.
             </p>
+            <br></br>
+            <br></br>
             <img src={resume}/>
         </div>
     );

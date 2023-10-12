@@ -103,7 +103,7 @@ h1 {
     letter-spacing: 3px;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 15px;
+    padding: 0px 15px 0px 15px;
     width: 100%;
 }
 
@@ -114,7 +114,7 @@ p {
 
 #Content {
     background-color: var(--text-background-color);
-    padding: 10px 0px 10px 15px;
+    padding: 10px 15px 10px 15px;
     width: 100%;
     font-size: calc(15px + 0.390625vw);
 }
@@ -125,5 +125,12 @@ p {
 
 #ContentContainer {
     width: 100%;
+}
+
+#AboutText {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 

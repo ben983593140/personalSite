@@ -5,7 +5,7 @@ import Sidebar from './Sidebar.jsx'
 import Background from "./Background.jsx";
 import logo from './logo.png';
 import resume from './Zaojia Zhao Resume.jpg';
-
+import dmc from './dmc3.jpg'
 const FADE_SPEED = 0.04
 
 class App extends React.Component{
@@ -13,7 +13,7 @@ class App extends React.Component{
     constructor(props) {
         super(props);
 
-        this.state = {activeButton: "Resume"};
+        this.state = {activeButton: "About"};
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -107,10 +107,21 @@ function ScrollUp() {
 
 function About() {
     return (
-        <p className="Content">
-            I graduated from <a href="https://www.ucdavis.edu/">University of California, Davis</a> with Bachelor's Degree in 
-            Computer Science in 2023.
-        </p>
+        <div id="AboutText">
+            <p>
+                I graduated from <a href="https://www.ucdavis.edu/">University of California, Davis</a> with Bachelor's Degree in 
+                Computer Science in 2023. My enthusiasm in programming started from video games, I still remember the day that I was
+                terrified by the name "Devil May Cry 3" and thought it was a horror game, but eventually amazed by the action and excitement
+                that Capcom brought to a young kid as myself.
+            </p>
+            <br></br>
+            <img src={dmc} ></img>
+            <br></br>
+            <p>
+            Currently, I am
+            </p>
+        </div>
+
     );
 }
 

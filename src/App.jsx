@@ -118,7 +118,8 @@ function About() {
             <img src={dmc} ></img>
             <br></br>
             <p>
-            Currently, I am
+            Currently, I am pursuing a career as a software engineer. During my spare time, I like watching different guides on game development 
+            and designing the game I want to make in one day. Sometimes I like to
             </p>
         </div>
 

@@ -118,8 +118,11 @@ function About() {
             <img src={dmc} ></img>
             <br></br>
             <p>
-            Currently, I am pursuing a career as a software engineer. During my spare time, I like watching different guides on game development 
-            and designing the game I want to make in one day. Sometimes I like to
+                Currently, I am pursuing a career as a software engineer. I like reading various guides on game development 
+                and I am designing the game I want to create in one day. Although my passion was inspired by video games, I 
+                see myself not limited to game development. Throughout my college years, I learned various concepts and 
+                problems that computer scientists solved, and I am deeply attracted to software development and problem solving.
+                I have written a couple programs to automate my personal streaming setup, and they work like a charm!
             </p>
         </div>
 

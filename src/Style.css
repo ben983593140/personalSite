@@ -134,3 +134,9 @@ p {
     align-items: center;
 }
 
+
+.Section {
+    display: flex;
+    flex-direction: row;
+    
+}

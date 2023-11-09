@@ -134,48 +134,23 @@ function About() {
 function Projects() {
     var project_titles = ["L-Store Database Project", "Holomyth Soul"];
     var project_icons = [lstoreIcon, lstoreIcon];
+    var project_links = ["https://github.com/ben983593140/LStoreDB", "https://github.com/ben983593140/HoloMythSouls"]
     var project_descriptions = [
         <p>
-            For my ECS 165A course, we implemneted a reducted version of 
-            <a href="https://research.ibm.com/publications/l-store-a-real-time-oltp-and-olap-system"> Lstore</a>
-            Database
+            For my ECS 165A course, we implemented a reducted version of <a href="https://research.ibm.com/publications/l-store-a-real-time-oltp-and-olap-system">Lstore</a> Database
         </p>,
         <p>
             This is the second description
         </p>
     ];
 
-
-    // var content = document.createElement("div");
-    // for (let i = 0; i < project_titles.length; i++) {
-    //     let section = document.createElement("div");
-    //     section.appendChild(project_icons[i]);
-
-    //     let subsection = document.createElement()
-
-        // let section = 
-        //     <div className='Section'>
-        //         {project_icons[i]}
-        //         <div>
-        //             {project_titles[i]}
-        //             {project_descriptions[i]}
-        //         </div>
-        //     </div>;
-        
-    // }
-
-    (            <div className='Section'>
-
-    Hello world!
-</div>)
     return (
             project_titles.map((item, index) => {
             return (
-                <div>
-                    <a href={project_icons[index]}></a>
-
-                <div>
-                    {project_titles[index]}
+                <div class="ProjectDiv">
+                    <img src={project_icons[index]}></img>
+                <div class='ProjectContent'>
+                    <a class='ProjectTitle' href={project_links[index]}>{project_titles[index]}</a>
                     {project_descriptions[index]}
                 </div>
                 </div>

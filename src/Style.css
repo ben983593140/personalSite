@@ -135,8 +135,22 @@ p {
 }
 
 
-.Section {
+.ProjectDiv {
     display: flex;
     flex-direction: row;
-    
+    padding: 25px 25px 50px 25px;
+}
+
+.ProjectContent {
+    display: flex;
+    width: 100%;
+    padding-left: 25px;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.ProjectTitle {
+    font-size: calc((15px + 0.390625vw) * 1.5);
+    font-weight: 500;
 }

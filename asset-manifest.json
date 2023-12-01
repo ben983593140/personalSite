@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.df1bb877.css",
-    "main.js": "/portfolio/static/js/main.e19a6d35.js",
+    "main.css": "/portfolio/static/css/main.3c5677b5.css",
+    "main.js": "/portfolio/static/js/main.f08dd804.js",
     "static/js/787.bbe01249.chunk.js": "/portfolio/static/js/787.bbe01249.chunk.js",
     "static/media/Zaojia Zhao Resume.jpg": "/portfolio/static/media/Zaojia Zhao Resume.dd730a54fa2fa51d9770.jpg",
+    "static/media/holomyth.png": "/portfolio/static/media/holomyth.f8c462afb9029b533ef4.png",
     "static/media/dmc3.jpg": "/portfolio/static/media/dmc3.8c47e19c477f1c38dd20.jpg",
     "static/media/lstore.png": "/portfolio/static/media/lstore.2c99c50af4c2e7ac2d0b.png",
     "static/media/logo.png": "/portfolio/static/media/logo.d6a6d9038799b6578220.png",
     "index.html": "/portfolio/index.html",
-    "main.df1bb877.css.map": "/portfolio/static/css/main.df1bb877.css.map",
-    "main.e19a6d35.js.map": "/portfolio/static/js/main.e19a6d35.js.map",
+    "main.3c5677b5.css.map": "/portfolio/static/css/main.3c5677b5.css.map",
+    "main.f08dd804.js.map": "/portfolio/static/js/main.f08dd804.js.map",
     "787.bbe01249.chunk.js.map": "/portfolio/static/js/787.bbe01249.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df1bb877.css",
-    "static/js/main.e19a6d35.js"
+    "static/css/main.3c5677b5.css",
+    "static/js/main.f08dd804.js"
   ]
 }
